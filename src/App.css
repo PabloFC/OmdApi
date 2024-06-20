@@ -3,20 +3,21 @@ body {
   color: #ffffff;
 }
 
-.movie-app > .row {
+.movieList > .row {
   overflow-x: auto;
+  overflow-y: hidden;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
 
-.movie-app > .row::-webkit-scrollbar {
-  height: 10px;
+.movieList > .row::-webkit-scrollbar {
+  height: 20px;
 }
-.movie-app > .row::-webkit-scrollbar-track {
+.movieList > .row::-webkit-scrollbar-track {
   background: #141414;
 }
 
-.movie-app > .row::-webkit-scrollbar-thumb {
+.movieList > .row::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 10px;
   border: 2px solid #141414;
