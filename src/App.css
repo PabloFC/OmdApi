@@ -4,8 +4,48 @@ body {
 }
 
 .movie-app > .row {
-  /* overflow-x: auto; */
-  overflow-x: hidden;
+  overflow-x: auto;
   flex-wrap: nowrap;
   white-space: nowrap;
+}
+
+.movie-app > .row::-webkit-scrollbar {
+  height: 10px;
+}
+.movie-app > .row::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+.movie-app > .row::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #141414;
+}
+
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
 }
