@@ -24,10 +24,10 @@ body {
 }
 
 .image-container {
-  position: relative;
-  transition: transform 0.2s;
+  /* position: relative; */
+  transition: transform 0.5s;
   display: inline-block;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .image-container:hover {
