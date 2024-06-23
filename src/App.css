@@ -3,6 +3,10 @@ body {
   color: #ffffff;
 }
 
+.colorSecundario {
+  color: #f5c518;
+}
+
 .movieList > .row {
   overflow-x: auto;
   overflow-y: hidden;
@@ -24,10 +28,8 @@ body {
 }
 
 .image-container {
-  /* position: relative; */
   transition: transform 0.5s;
   display: inline-block;
-  /* margin-right: 10px; */
 }
 
 .image-container:hover {
@@ -49,4 +51,8 @@ body {
   font-size: 20px;
   padding: 20px;
   text-align: center;
+}
+
+.movieDetails {
+  overflow-x: hidden;
 }

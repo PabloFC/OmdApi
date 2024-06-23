@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MovieList = ({
   movies,
   handleAddFavouritesMovie,
@@ -13,7 +15,9 @@ const MovieList = ({
           key={index}
         >
           <div className="card">
-            <img src={movie.Poster} alt={movie.Title} className="img-fluid" />
+            <Link to={`/movie/${movie.imdbID}`}>
+              <img src={movie.Poster} alt={movie.Title} className="img-fluid" />
+            </Link>
             <div
               onClick={() => handleAddFavouritesMovie(movie)}
               className="overlay d-flex align-items-center justify-content-center"
