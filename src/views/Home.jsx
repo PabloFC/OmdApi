@@ -53,7 +53,7 @@ const Home = () => {
           searchWords={searchWords}
           setSearchWords={setSearchWords}
         />
-        {console.log("searchWords: ", searchWords)}
+        {/* {console.log("searchWords: ", searchWords)} */}
       </div>
       <div className="row">
         <MovieList
@@ -66,7 +66,7 @@ const Home = () => {
       {favourites.length > 0 && (
         <>
           <div className="row d-flex align-items-center mt-4 mb-4">
-            <Heading title="Favourites" />
+            <Heading title="Favorites" />
           </div>
           <div className="row">
             <MovieList

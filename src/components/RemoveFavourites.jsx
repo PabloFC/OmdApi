@@ -1,7 +1,7 @@
 const RemoveFavourites = () => {
   return (
     <div>
-      <span className="text-white">Remove from Favourites</span>
+      <span className="text-white">Remove from Favorites</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
