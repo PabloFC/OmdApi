@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const MovieDetails = () => {
   const [details, setDetails] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const onNavigateBack = () => {
+    navigate(-1);
+  };
 
   useEffect(() => {
     async function fetchApi(id) {
@@ -25,29 +30,34 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="movieDetails">
+    <div className="container movieDetails mt-4 animate__animated animate__fadeInLeft">
       <h1 className="m-4">Movie details</h1>
 
       <div className="row">
-        <div className="d-flex flex-row  ">
-          <div className="m-4 col col-sm-3 d-flex justify-content-center">
-            <img src={details.Poster} alt={`${details.Title} Poster`} />
-          </div>
-          <div className="p-5 col col-sm-4" key={details.imdbID}>
-            <h5>
-              <span className="colorSecundario">Titulo:</span> {details.Title}
-            </h5>
-            <h5>
-              <span className="colorSecundario">Año:</span> {details.Year}
-            </h5>
-            <h5>
-              <span className="colorSecundario ">Sipnosis:</span> {details.Plot}
-            </h5>
-            <h5>
-              <span className="colorSecundario">Puntuación:</span>{" "}
-              {details.Ratings[0].Value}
-            </h5>
-          </div>
+        <div className="col-12 col-md-4  mb-4">
+          <img
+            src={details.Poster}
+            alt={`${details.Title} Poster`}
+            className="img-fluid"
+          />
+        </div>
+        <div className="col-12 col-md-8">
+          <h5>
+            <span className="colorSecundario">Titulo:</span> {details.Title}
+          </h5>
+          <h5>
+            <span className="colorSecundario">Año:</span> {details.Year}
+          </h5>
+          <h5>
+            <span className="colorSecundario">Sipnosis:</span> {details.Plot}
+          </h5>
+          <h5>
+            <span className="colorSecundario">Puntuación:</span>{" "}
+            {details.Ratings[0].Value}
+          </h5>
+          <button className="btn btn-outline-primary" onClick={onNavigateBack}>
+            Volver
+          </button>
         </div>
       </div>
     </div>

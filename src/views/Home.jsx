@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <div className="container-fluid movieList">
       <div className="row d-flex align-items-center mt-4 mb-4">
-        <Heading title="Películas" />
+        <Heading title="Movies" />
         <SearchInput
           searchWords={searchWords}
           setSearchWords={setSearchWords}
@@ -66,7 +66,7 @@ const Home = () => {
       {favourites.length > 0 && (
         <>
           <div className="row d-flex align-items-center mt-4 mb-4">
-            <Heading title="Mis favoritas" />
+            <Heading title="Favourites" />
           </div>
           <div className="row">
             <MovieList
