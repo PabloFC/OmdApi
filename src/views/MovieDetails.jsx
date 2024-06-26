@@ -30,7 +30,7 @@ const MovieDetails = () => {
 
       <div className="row">
         <div className="d-flex flex-row  ">
-          <div className="m-4 col col-sm-2">
+          <div className="m-4 col col-sm-3 d-flex justify-content-center">
             <img src={details.Poster} alt={`${details.Title} Poster`} />
           </div>
           <div className="p-5 col col-sm-4" key={details.imdbID}>
