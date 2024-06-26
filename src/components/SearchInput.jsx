@@ -6,7 +6,7 @@ const SearchInput = ({ searchWords, setSearchWords }) => {
         value={searchWords.value}
         onChange={(e) => setSearchWords(e.target.value)}
         type="text"
-        placeholder="Buscar película"
+        placeholder="Search movie"
       />
     </div>
   );

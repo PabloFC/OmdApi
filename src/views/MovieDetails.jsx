@@ -34,29 +34,47 @@ const MovieDetails = () => {
       <h1 className="m-4">Movie details</h1>
 
       <div className="row">
-        <div className="col-12 col-md-4  mb-4">
+        <div className="col-12 col-md-4 mb-4">
           <img
             src={details.Poster}
             alt={`${details.Title} Poster`}
             className="img-fluid"
           />
         </div>
-        <div className="col-12 col-md-8">
+        <div className="col-12 col-md-8 mt-4">
           <h5>
-            <span className="colorSecundario">Titulo:</span> {details.Title}
+            <span className="colorSecundario">Original tittle:</span>{" "}
+            {details.Title}
           </h5>
           <h5>
-            <span className="colorSecundario">Año:</span> {details.Year}
+            <span className="colorSecundario">Year:</span> {details.Year}
           </h5>
           <h5>
-            <span className="colorSecundario">Sipnosis:</span> {details.Plot}
+            <span className="colorSecundario">Runtime:</span> {details.Runtime}
           </h5>
           <h5>
-            <span className="colorSecundario">Puntuación:</span>{" "}
+            <span className="colorSecundario">Country:</span> {details.Country}
+          </h5>
+          <h5>
+            <span className="colorSecundario">Director:</span>
+            {details.Director}
+          </h5>
+          <h5>
+            <span className="colorSecundario">Actors:</span>
+            {details.Actors}
+          </h5>
+          <h5>
+            <span className="colorSecundario">Synopsis:</span> {details.Plot}
+          </h5>
+          <h5>
+            <span className="colorSecundario">Rating:</span>{" "}
             {details.Ratings[0].Value}
           </h5>
-          <button className="btn btn-outline-primary" onClick={onNavigateBack}>
-            Volver
+          <button
+            className="btn btn-outline-light mt-2"
+            onClick={onNavigateBack}
+          >
+            Go Back
           </button>
         </div>
       </div>
