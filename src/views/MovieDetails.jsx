@@ -56,11 +56,11 @@ const MovieDetails = () => {
             <span className="colorSecundario">Country:</span> {details.Country}
           </h5>
           <h5>
-            <span className="colorSecundario">Director:</span>
+            <span className="colorSecundario">Director: </span>
             {details.Director}
           </h5>
           <h5>
-            <span className="colorSecundario">Actors:</span>
+            <span className="colorSecundario">Actors: </span>
             {details.Actors}
           </h5>
           <h5>
