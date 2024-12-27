@@ -47,7 +47,7 @@ const Home = () => {
 
   return (
     <div className="container-fluid movieList">
-      <div className="row d-flex align-items-center mt-4 mb-4">
+      <div className="row flex-column flex-md-row d-flex align-items-center mt-4 mb-4">
         <Heading title="Movies" />
         <SearchInput
           searchWords={searchWords}
