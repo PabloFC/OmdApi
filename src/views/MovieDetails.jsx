@@ -38,10 +38,10 @@ const MovieDetails = () => {
           <img
             src={details.Poster}
             alt={`${details.Title} Poster`}
-            className="img-fluid"
+            className="img-fluid movie-img"
           />
         </div>
-        <div className="col-12 col-md-8 mt-4">
+        <div className="col-12 col-md-8 mt-1">
           <h5>
             <span className="colorSecundario">Original tittle:</span>{" "}
             {details.Title}

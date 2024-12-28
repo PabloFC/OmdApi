@@ -56,3 +56,9 @@ body {
 .movieDetails {
   overflow-x: hidden;
 }
+
+.movie-img {
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
