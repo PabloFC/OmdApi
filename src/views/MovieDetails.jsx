@@ -30,7 +30,7 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="container movieDetails mt-4 animate__animated animate__fadeInLeft">
+    <div className="container movieDetails  animate__animated animate__fadeInLeft py-4">
       <h1 className="m-4">Movie details</h1>
 
       <div className="row">

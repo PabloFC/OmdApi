@@ -48,12 +48,15 @@ const Home = () => {
   return (
     <div className="container-fluid movieList">
       <div className="row flex-column flex-md-row d-flex align-items-center mt-4 mb-4">
-        <Heading title="Movies" />
-        <SearchInput
-          searchWords={searchWords}
-          setSearchWords={setSearchWords}
-        />
-        {/* {console.log("searchWords: ", searchWords)} */}
+        <div className="col-12 col-md-auto mb-3 mb-md-0">
+          <Heading title="Movies" />
+        </div>
+        <div className="col-12 col-md">
+          <SearchInput
+            searchWords={searchWords}
+            setSearchWords={setSearchWords}
+          />
+        </div>
       </div>
       <div className="row">
         <MovieList
@@ -66,7 +69,9 @@ const Home = () => {
       {favourites.length > 0 && (
         <>
           <div className="row d-flex align-items-center mt-4 mb-4">
-            <Heading title="Favorites" />
+            <div className="col-12">
+              <Heading title="Favorites" />
+            </div>
           </div>
           <div className="row">
             <MovieList
