@@ -4,34 +4,16 @@ import Heading from "../components/Heading";
 import MovieList from "../components/MovieList";
 import AddFavourites from "../components/AddFavourites";
 import RemoveFavourites from "../components/RemoveFavourites";
+import useMovies from "../hooks/useMovies";
 
 const Home = () => {
+  const { movies, getMovies } = useMovies();
   const [searchWords, setSearchWords] = useState("");
-  const [movies, setMovies] = useState([]);
   const [favourites, setFavourites] = useState([]);
-
-  const getMovies = async (searchWords) => {
-    const url = `https://www.omdbapi.com/?s=${searchWords}&apikey=c399d1f6`;
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      // console.log(data);
-
-      if (data.Search) {
-        setMovies(data.Search);
-      } else {
-        setMovies([]);
-      }
-    } catch (error) {
-      console.error("Error fetching the movies: ", error);
-      setMovies([]);
-    }
-  };
 
   useEffect(() => {
     getMovies(searchWords);
-  }, [searchWords]);
+  }, [searchWords, getMovies]);
 
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie];
