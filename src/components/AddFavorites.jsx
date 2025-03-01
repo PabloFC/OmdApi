@@ -1,4 +1,4 @@
-const AddFavourites = () => {
+const AddFavorites = () => {
   return (
     <div>
       <span className="text-white">Add to favorites</span>
@@ -16,4 +16,4 @@ const AddFavourites = () => {
   );
 };
 
-export default AddFavourites;
+export default AddFavorites;

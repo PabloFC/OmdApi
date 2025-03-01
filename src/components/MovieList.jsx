@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 
-const MovieList = ({
-  movies,
-  handleAddFavouritesMovie,
-  favouriteComponent,
-}) => {
-  const FavouriteComponent = favouriteComponent;
+const MovieList = ({ movies, handleAddFavoritesMovie, favoriteComponent }) => {
+  const FavoriteComponent = favoriteComponent;
 
   return (
     <div className="image-gallery">
@@ -19,10 +15,10 @@ const MovieList = ({
               <img src={movie.Poster} alt={movie.Title} className="img-fluid" />
             </Link>
             <div
-              onClick={() => handleAddFavouritesMovie(movie)}
+              onClick={() => handleAddFavoritesMovie(movie)}
               className="overlay d-flex align-items-center justify-content-center"
             >
-              <FavouriteComponent movie={movie} />
+              <FavoriteComponent movie={movie} />
             </div>
           </div>
         </div>

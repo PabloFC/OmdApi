@@ -11,17 +11,20 @@ const MovieDetails = () => {
   };
 
   useEffect(() => {
-    async function fetchApi(id) {
+    const fetchApi = async (id) => {
       try {
         let response = await fetch(
           `https://www.omdbapi.com/?i=${id}&apikey=c399d1f6`
         );
+        if (!response.ok) {
+          throw new Error("Response was not ok");
+        }
         let json = await response.json();
         setDetails(json);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
-    }
+    };
     fetchApi(id);
   }, [id]);
 

@@ -2,29 +2,29 @@ import { useEffect, useState } from "react";
 import SearchInput from "../components/SearchInput";
 import Heading from "../components/Heading";
 import MovieList from "../components/MovieList";
-import AddFavourites from "../components/AddFavourites";
-import RemoveFavourites from "../components/RemoveFavourites";
+import AddFavorites from "../components/AddFavorites";
+import RemoveFavorites from "../components/RemoveFavorites";
 import useMovies from "../hooks/useMovies";
 
 const Home = () => {
   const { movies, getMovies } = useMovies();
   const [searchWords, setSearchWords] = useState("");
-  const [favourites, setFavourites] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     getMovies(searchWords);
   }, [searchWords, getMovies]);
 
-  const addFavouriteMovie = (movie) => {
-    const newFavouriteList = [...favourites, movie];
-    setFavourites(newFavouriteList);
+  const addFavoriteMovie = (movie) => {
+    const newFavoriteList = [...favorites, movie];
+    setFavorites(newFavoriteList);
   };
 
-  const removeFavouriteMovie = (movie) => {
-    const newFavouriteList = favourites.filter(
-      (favourite) => favourite.imdbID !== movie.imdbID
+  const removeFavoriteMovie = (movie) => {
+    const newFavoriteList = favorites.filter(
+      (favorite) => favorite.imdbID !== movie.imdbID
     );
-    setFavourites(newFavouriteList);
+    setFavorites(newFavoriteList);
   };
 
   return (
@@ -43,12 +43,12 @@ const Home = () => {
       <div className="row">
         <MovieList
           movies={movies}
-          handleAddFavouritesMovie={addFavouriteMovie}
-          favouriteComponent={AddFavourites}
+          handleAddFavoritesMovie={addFavoriteMovie}
+          favoriteComponent={AddFavorites}
         />
       </div>
 
-      {favourites.length > 0 && (
+      {favorites.length > 0 && (
         <>
           <div className="row d-flex align-items-center mt-4 mb-4">
             <div className="col-12">
@@ -57,9 +57,9 @@ const Home = () => {
           </div>
           <div className="row">
             <MovieList
-              movies={favourites}
-              handleAddFavouritesMovie={removeFavouriteMovie}
-              favouriteComponent={RemoveFavourites}
+              movies={favorites}
+              handleAddFavoritesMovie={removeFavoriteMovie}
+              favoriteComponent={RemoveFavorites}
             />
           </div>
         </>
