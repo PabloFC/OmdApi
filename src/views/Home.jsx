@@ -5,27 +5,17 @@ import MovieList from "../components/MovieList";
 import AddFavorites from "../components/AddFavorites";
 import RemoveFavorites from "../components/RemoveFavorites";
 import useMovies from "../hooks/useMovies";
+import useFavoriteMovies from "../hooks/useFavoriteMovies";
 
 const Home = () => {
   const { movies, getMovies } = useMovies();
   const [searchWords, setSearchWords] = useState("");
-  const [favorites, setFavorites] = useState([]);
+  const { favorites, addFavoriteMovie, removeFavoriteMovie } =
+    useFavoriteMovies();
 
   useEffect(() => {
     getMovies(searchWords);
   }, [searchWords, getMovies]);
-
-  const addFavoriteMovie = (movie) => {
-    const newFavoriteList = [...favorites, movie];
-    setFavorites(newFavoriteList);
-  };
-
-  const removeFavoriteMovie = (movie) => {
-    const newFavoriteList = favorites.filter(
-      (favorite) => favorite.imdbID !== movie.imdbID
-    );
-    setFavorites(newFavoriteList);
-  };
 
   return (
     <div className="container-fluid movieList">
