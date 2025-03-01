@@ -46,31 +46,31 @@ const MovieDetails = () => {
         </div>
         <div className="col-12 col-md-8 mt-1">
           <h5>
-            <span className="colorSecundario">Original tittle:</span>{" "}
+            <span className="secondaryColor">Original tittle:</span>{" "}
             {details.Title}
           </h5>
           <h5>
-            <span className="colorSecundario">Year:</span> {details.Year}
+            <span className="secondaryColor">Year:</span> {details.Year}
           </h5>
           <h5>
-            <span className="colorSecundario">Runtime:</span> {details.Runtime}
+            <span className="secondaryColor">Runtime:</span> {details.Runtime}
           </h5>
           <h5>
-            <span className="colorSecundario">Country:</span> {details.Country}
+            <span className="secondaryColor">Country:</span> {details.Country}
           </h5>
           <h5>
-            <span className="colorSecundario">Director: </span>
+            <span className="secondaryColor">Director: </span>
             {details.Director}
           </h5>
           <h5>
-            <span className="colorSecundario">Actors: </span>
+            <span className="secondaryColor">Actors: </span>
             {details.Actors}
           </h5>
           <h5>
-            <span className="colorSecundario">Synopsis:</span> {details.Plot}
+            <span className="secondaryColor">Synopsis:</span> {details.Plot}
           </h5>
           <h5>
-            <span className="colorSecundario">Rating:</span>{" "}
+            <span className="secondaryColor">Rating:</span>{" "}
             {details.Ratings[0].Value}
           </h5>
           <button

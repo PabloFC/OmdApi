@@ -1,10 +1,18 @@
-body {
-  background: #141414;
-  color: #ffffff;
+:root {
+  --background-color: #141414;
+  --primary-color: #ffffff;
+  --secondary-color: #f5c518;
+  --scrollbar-thumb-color: #888;
+  --overlay-background: rgba(0, 0, 0, 0.8);
 }
 
-.colorSecundario {
-  color: #f5c518;
+body {
+  background: var(--background-color);
+  color: var(--primary-color);
+}
+
+.secondaryColor {
+  color: var(--secondary-color);
 }
 
 .movieList > .row {
@@ -17,14 +25,15 @@ body {
 .movieList > .row::-webkit-scrollbar {
   height: 20px;
 }
+
 .movieList > .row::-webkit-scrollbar-track {
-  background: #141414;
+  background: var(--background-color);
 }
 
 .movieList > .row::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: var(--scrollbar-thumb-color);
   border-radius: 10px;
-  border: 2px solid #141414;
+  border: 2px solid var(--background-color);
 }
 
 .image-container {
@@ -43,7 +52,7 @@ body {
 
 .overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--overlay-background);
   width: 100%;
   transition: 0.5s ease;
   opacity: 0;
